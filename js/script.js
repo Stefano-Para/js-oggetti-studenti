@@ -60,11 +60,14 @@ console.log(arrayEta);
 
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
 for (i = 0; i < studenti.length; i++){
-    var prova = studenti[i];
-    var nomiCognomi = prova['nome']['cognome'];
-    console.log(nomiCognomi);
-    
-}
-
+    var nomiCognomi = studenti[i].nome + " " + studenti[i].cognome;
+    console.log(nomiCognomi);  
+};
 
 // Dare la possibilità all'utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell'ordine: nome, cognome e età.
+arrayNomi.push(prompt("Inserisci qui un nome:"));
+arrayCognomi.push(prompt("Inserisci qui un cognome:"));
+arrayEta.push(parseInt(prompt("Inserisci qui l'eta:")));
+console.log(arrayNomi);
+console.log(arrayCognomi);
+console.log(arrayEta);
