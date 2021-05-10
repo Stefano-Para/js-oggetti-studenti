@@ -26,14 +26,21 @@ var studenti =
     }
 ];
 console.log("Mostra ciò che è contenuto in [studenti]:");
-console.log(studenti)
+console.log(studenti);
+
+var names = [];
+for(var key in studenti) {
+ names.push(studenti[key].name);
+}
+
+// questo ciclo for in è specifico per ricercare una key all'interno del "studenti". Nel caso specifico di un array con un solo oggetto va bene, nel caso di un array con più oggetti al "for-in" mi darà l'index. Quindi da recuperare l'oggetto  facendo esempio.nomi => variabile . Console.log(variabile).
 
 
 // Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
+/*
 var arrayNomi = [];
 var arrayCognomi = [];
 var arrayEta = [];
-
 
 for (i = 0; i < studenti.length ; i++) {
     var totaleOggetti = studenti[i];
@@ -56,7 +63,7 @@ for (i = 0; i < studenti.length ; i++) {
 }
 console.log(arrayNomi);
 console.log(arrayCognomi);
-console.log(arrayEta);
+console.log(arrayEta);*/
 
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
 for (i = 0; i < studenti.length; i++){
@@ -65,20 +72,12 @@ for (i = 0; i < studenti.length; i++){
 };
 
 // Dare la possibilità all'utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell'ordine: nome, cognome e età.
-var newInput = [{
-    
-
-    nome: push(prompt("Inserisci qui un nome:")),
-    cognome: push(prompt("Inserisci qui un cognome:")),
+var newInput = {
+    nome: prompt("Inserisci qui un nome:"),
+    cognome: prompt("Inserisci qui un cognome:"),
     eta: parseInt(prompt("Inserisci qui l'eta:")),
-}
-];
+};
+studenti.push(newInput)
 
-console.log(newInput)
-
-console.log(studenti);
-
-console.log(arrayNomi);
-console.log(arrayCognomi);
-console.log(arrayEta);
-
+//controllo di ciò che ho nel primo array di oggetti
+console.log(studenti)
