@@ -30,14 +30,15 @@ console.log(studenti);
 
 var names = [];
 for(var key in studenti) {
- names.push(studenti[key].name);
+ names.push(key + ": " + studenti[key]);
 }
+
 
 // questo ciclo for in è specifico per ricercare una key all'interno del "studenti". Nel caso specifico di un array con un solo oggetto va bene, nel caso di un array con più oggetti al "for-in" mi darà l'index. Quindi da recuperare l'oggetto  facendo esempio.nomi => variabile . Console.log(variabile).
 
 
 // Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
-/*
+
 var arrayNomi = [];
 var arrayCognomi = [];
 var arrayEta = [];
@@ -63,7 +64,7 @@ for (i = 0; i < studenti.length ; i++) {
 }
 console.log(arrayNomi);
 console.log(arrayCognomi);
-console.log(arrayEta);*/
+console.log(arrayEta);
 
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
 for (i = 0; i < studenti.length; i++){
@@ -80,4 +81,5 @@ var newInput = {
 studenti.push(newInput)
 
 //controllo di ciò che ho nel primo array di oggetti
+console.log(newInput)
 console.log(studenti)
